@@ -1,13 +1,13 @@
 version: '3'
 
 services:
-    mirotalk:
-        image: mirotalk:latest
+    airclass:
+        image: airclass:latest
         build:
             context: .
             dockerfile: Dockerfile
-        container_name: mirotalk
-        hostname: mirotalk
+        container_name: airclass
+        hostname: airclass
         volumes:
             - .env:/usr/src/app/.env:ro
         restart: unless-stopped
@@ -20,7 +20,7 @@ services:
 #     - 3000
 #   labels:
 #     - "traefik.enable=true"
-#     - "traefik.http.routers.mirotalk.rule=Host(`mirotalk.example.com`)"
-#     - "traefik.http.routers.mirotalk.entrypoints=websecure"
-#     - "traefik.http.routers.mirotalk.tls.certresolver=myresolver"
-#     - "traefik.http.services.mirotalk.loadbalancer.server.port=3000"
+#     - "traefik.http.routers.airclass.rule=Host(`airclass.example.com`)"
+#     - "traefik.http.routers.airclass.entrypoints=websecure"
+#     - "traefik.http.routers.airclass.tls.certresolver=myresolver"
+#     - "traefik.http.services.airclass.loadbalancer.server.port=3000"

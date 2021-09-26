@@ -3,7 +3,7 @@
 module.exports = class Logger {
     constructor(appName) {
         if (appName) this.appName = appName;
-        else this.appName = 'mirotalk';
+        else this.appName = 'airclass';
     }
 
     debug(msg, op = '') {

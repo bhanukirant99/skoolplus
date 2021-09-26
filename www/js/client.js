@@ -5,7 +5,7 @@
 ██      ██      ██ ██      ██  ██ ██    ██    
  ██████ ███████ ██ ███████ ██   ████    ██   
 
-MiroTalk Browser Client
+airclass Browser Client
 Copyright (C) 2021 Miroslav Pejic <miroslav.pejic.85@gmail.com>
 
 This program is free software: you can redistribute it and/or modify
@@ -65,8 +65,8 @@ let callStartTime;
 let callElapsedTime;
 let recStartTime;
 let recElapsedTime;
-let mirotalkTheme = 'neon'; // neon - dark - forest - ghost ...
-let mirotalkBtnsBar = 'vertical'; // vertical - horizontal
+let airclassTheme = 'neon'; // neon - dark - forest - ghost ...
+let airclassBtnsBar = 'vertical'; // vertical - horizontal
 let swalBackground = 'rgba(0, 0, 0, 0.7)'; // black - #16171b - transparent ...
 let peerGeo;
 let peerConnection;
@@ -290,8 +290,8 @@ function getHtmlElementsById() {
     videoQualitySelect = getId('videoQuality');
     videoFpsSelect = getId('videoFps');
     screenFpsSelect = getId('screenFps');
-    themeSelect = getId('mirotalkTheme');
-    btnsBarSelect = getId('mirotalkBtnsBar');
+    themeSelect = getId('airclassTheme');
+    btnsBarSelect = getId('airclassBtnsBar');
     // my conference name, hand, video - audio status
     myVideoParagraph = getId('myVideoParagraph');
     myHandStatusIcon = getId('myHandStatusIcon');
@@ -560,7 +560,7 @@ function thereIsPeerConnections() {
  * On body load Get started
  */
 function initClientPeer() {
-    setTheme(mirotalkTheme);
+    setTheme(airclassTheme);
 
     if (!isWebRTCSupported) {
         userLog('error', 'This browser seems not supported WebRTC!');
@@ -622,7 +622,7 @@ function whoAreYou() {
         allowEscapeKey: false,
         background: swalBackground,
         position: 'center',
-        imageAlt: 'mirotalk-name',
+        imageAlt: 'airclass-name',
         imageUrl: welcomeImg,
         title: 'Enter your name',
         input: 'text',
@@ -699,7 +699,7 @@ function welcomeUser() {
         background: swalBackground,
         position: 'center',
         title: '<strong>Welcome ' + myPeerName + '</strong>',
-        imageAlt: 'mirotalk-welcome',
+        imageAlt: 'airclass-welcome',
         imageUrl: welcomeImg,
         html:
             `
@@ -725,7 +725,7 @@ function welcomeUser() {
         } else if (result.isDenied) {
             let message = {
                 email: '',
-                subject: 'Please join our MiroTalk Video Chat Meeting',
+                subject: 'Please join our airclass Video Chat Meeting',
                 body: 'Click to join: ' + myRoomUrl,
             };
             shareRoomByEmail(message);
@@ -828,7 +828,7 @@ function handleRTCDataChannels(peer_id) {
         console.log('handleRTCDataChannels ' + peer_id, event);
         event.channel.onmessage = (msg) => {
             switch (event.channel.label) {
-                case 'mirotalk_chat_channel':
+                case 'airclass_chat_channel':
                     try {
                         let dataMessage = JSON.parse(msg.data);
                         handleDataChannelChat(dataMessage);
@@ -836,7 +836,7 @@ function handleRTCDataChannels(peer_id) {
                         console.error('handleDataChannelChat', err);
                     }
                     break;
-                case 'mirotalk_file_sharing_channel':
+                case 'airclass_file_sharing_channel':
                     try {
                         let dataFile = msg.data;
                         handleDataChannelFileSharing(dataFile);
@@ -1001,14 +1001,14 @@ function handleRemovePeer(config) {
 }
 
 /**
- * Set mirotalk theme neon | dark | forest | sky | ghost | ...
+ * Set airclass theme neon | dark | forest | sky | ghost | ...
  * @param {*} theme
  */
 function setTheme(theme) {
     if (!theme) return;
 
-    mirotalkTheme = theme;
-    switch (mirotalkTheme) {
+    airclassTheme = theme;
+    switch (airclassTheme) {
         case 'neon':
             // neon theme
             swalBackground = 'rgba(0, 0, 0, 0.7)';
@@ -1122,8 +1122,8 @@ function setTheme(theme) {
 function setButtonsBarPosition(position) {
     if (!position || isMobileDevice) return;
 
-    mirotalkBtnsBar = position;
-    switch (mirotalkBtnsBar) {
+    airclassBtnsBar = position;
+    switch (airclassBtnsBar) {
         case 'vertical':
             document.documentElement.style.setProperty('--btns-top', '50%');
             document.documentElement.style.setProperty('--btns-right', '0px');
@@ -1672,7 +1672,7 @@ function getTimeToString(time) {
  * Handle WebRTC left buttons
  */
 function manageLeftButtons() {
-    setButtonsBarPosition(mirotalkBtnsBar);
+    setButtonsBarPosition(airclassBtnsBar);
     setShareRoomBtn();
     setAudioBtn();
     setVideoBtn();
@@ -1807,7 +1807,7 @@ function setChatRoomBtn() {
 
     // ghost theme + undo
     msgerTheme.addEventListener('click', (e) => {
-        if (mirotalkTheme == 'ghost') return;
+        if (airclassTheme == 'ghost') return;
 
         if (e.target.className == 'fas fa-ghost') {
             e.target.className = 'fas fa-undo';
@@ -2414,7 +2414,7 @@ async function shareRoomUrl() {
             background: swalBackground,
             position: 'center',
             title: 'Share the Room',
-            imageAlt: 'mirotalk-share',
+            imageAlt: 'airclass-share',
             imageUrl: shareUrlImg,
             html:
                 `
@@ -2444,7 +2444,7 @@ async function shareRoomUrl() {
             } else if (result.isDenied) {
                 let message = {
                     email: '',
-                    subject: 'Please join our MiroTalk Video Chat Meeting',
+                    subject: 'Please join our airclass Video Chat Meeting',
                     body: 'Click to join: ' + myRoomUrl,
                 };
                 shareRoomByEmail(message);
@@ -2932,7 +2932,7 @@ function stopStreamRecording() {
  */
 function setRecordButtonUi() {
     recordStreamBtn.style.setProperty('background-color', 'white');
-    if (mirotalkTheme == 'ghost') recordStreamBtn.style.setProperty('background-color', 'transparent');
+    if (airclassTheme == 'ghost') recordStreamBtn.style.setProperty('background-color', 'transparent');
 }
 
 /**
@@ -2967,7 +2967,7 @@ function downloadRecordedStream() {
  * @param {*} peer_id
  */
 function createChatDataChannel(peer_id) {
-    chatDataChannels[peer_id] = peerConnections[peer_id].createDataChannel('mirotalk_chat_channel');
+    chatDataChannels[peer_id] = peerConnections[peer_id].createDataChannel('airclass_chat_channel');
     chatDataChannels[peer_id].onopen = (event) => {
         console.log('chatDataChannels created', event);
     };
@@ -4212,7 +4212,7 @@ function remoteWbAction(action) {
  * @param {*} peer_id
  */
 function createFileSharingDataChannel(peer_id) {
-    fileDataChannels[peer_id] = peerConnections[peer_id].createDataChannel('mirotalk_file_sharing_channel');
+    fileDataChannels[peer_id] = peerConnections[peer_id].createDataChannel('airclass_file_sharing_channel');
     fileDataChannels[peer_id].binaryType = 'arraybuffer';
     fileDataChannels[peer_id].onopen = (event) => {
         console.log('fileDataChannels created', event);
@@ -4336,7 +4336,7 @@ function selectFileToShare() {
     Swal.fire({
         allowOutsideClick: false,
         background: swalBackground,
-        imageAlt: 'mirotalk-file-sharing',
+        imageAlt: 'airclass-file-sharing',
         imageUrl: fileSharingImg,
         position: 'center',
         title: 'Share the file',
@@ -4433,7 +4433,7 @@ function endDownload() {
                 title: 'Received file',
                 text: incomingFileInfo.fileName + ' size ' + bytesToSize(incomingFileInfo.fileSize),
                 imageUrl: e.target.result,
-                imageAlt: 'mirotalk-file-img-download',
+                imageAlt: 'airclass-file-img-download',
                 showDenyButton: true,
                 confirmButtonText: `Save`,
                 denyButtonText: `Cancel`,
@@ -4454,7 +4454,7 @@ function endDownload() {
         Swal.fire({
             allowOutsideClick: false,
             background: swalBackground,
-            imageAlt: 'mirotalk-file-download',
+            imageAlt: 'airclass-file-download',
             imageUrl: fileSharingImg,
             position: 'center',
             title: 'Received file',
@@ -4707,7 +4707,7 @@ function handleKickedOut(config) {
 }
 
 /**
- * MiroTalk about info
+ * airclass about info
  */
 function showAbout() {
     playSound('newMessage');
@@ -4716,15 +4716,15 @@ function showAbout() {
         background: swalBackground,
         position: 'center',
         title: '<strong>WebRTC Made with ❤️</strong>',
-        imageAlt: 'mirotalk-about',
+        imageAlt: 'airclass-about',
         imageUrl: aboutImg,
         html: `
         <br/>
         <div id="about">
             <b>Open Source</b> project on
-            <a href="https://github.com/miroslavpejic85/mirotalk" target="_blank"><br/></br>
-            <img alt="mirotalk github" src="../images/github.png"></a><br/><br/>
-            <button class="far fa-heart pulsate" onclick="window.open('https://github.com/sponsors/miroslavpejic85?o=esb')"> Sponsor</button>
+            <a href="https://github.com/bhanukirant99/airclass" target="_blank"><br/></br>
+            <img alt="airclass github" src="../images/github.png"></a><br/><br/>
+            <button class="far fa-heart pulsate" onclick="window.open('https://github.com/sponsors/bhanukirant99?o=esb')"> Sponsor</button>
             <br /><br />
             Author:<a href="https://www.linkedin.com/in/miroslav-pejic-976a07101/" target="_blank"> Miroslav Pejic</a>
         </div>
@@ -4747,7 +4747,7 @@ function leaveRoom() {
     Swal.fire({
         background: swalBackground,
         position: 'center',
-        imageAlt: 'mirotalk-leave',
+        imageAlt: 'airclass-leave',
         imageUrl: leaveRoomImg,
         title: 'Leave this room?',
         showDenyButton: true,

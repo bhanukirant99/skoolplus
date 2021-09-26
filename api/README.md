@@ -1,8 +1,8 @@
-[![restAPI](restAPI.png)](https://mirotalk.up.railway.app/api/v1/docs)
+[![restAPI](restAPI.png)](https://airclass.up.railway.app/api/v1/docs)
 
 ## Create a meeting
 
-Create a meeting with a `HTTP request` containing the `API_KEY` sent to MiroTalk’s server. The response contains a `meeting` URL that can be `embedded` in your client within an `iframe`.
+Create a meeting with a `HTTP request` containing the `API_KEY` sent to airclass’s server. The response contains a `meeting` URL that can be `embedded` in your client within an `iframe`.
 
 ```bash
 # js
@@ -22,7 +22,7 @@ Embedding a meeting into a `service` or `app` requires using an `iframe` with th
 ```html
 <iframe
     allow="camera; microphone; fullscreen; display-capture; autoplay"
-    src="https://mirotalk.up.railway.app/join/room_name"
+    src="https://airclass.up.railway.app/join/room_name"
     style="height: 100%; width: 100%; border: 0px;"
 ></iframe>
 ```
@@ -34,7 +34,7 @@ Develop your `website` or `application`, and bring `video meetings` in with a si
 ```html
 <iframe
     allow="camera; microphone; fullscreen; display-capture; autoplay"
-    src="https://mirotalk.up.railway.app/newcall"
+    src="https://airclass.up.railway.app/newcall"
     style="height: 100%; width: 100%; border: 0px;"
 ></iframe>
 ```

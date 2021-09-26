@@ -1,4 +1,4 @@
-# MiroTalk
+# airclass
 
 🚀 `A free WebRTC browser-based video call, chat and screen sharing` 🚀
 
@@ -9,12 +9,12 @@
 [![Author](https://img.shields.io/badge/Author-Miroslav-brightgreen.svg)](https://www.linkedin.com/in/miroslav-pejic-976a07101/)
 ![License: AGPLv3](https://img.shields.io/badge/License-AGPLv3-blue.svg)
 [![Donate](https://img.shields.io/badge/Donate-PayPal-brightgreen.svg)](https://paypal.me/MiroslavPejic?locale.x=it_IT)
-[![Repo Link](https://img.shields.io/badge/Repo-Link-black.svg)](https://github.com/miroslavpejic85/mirotalk)
+[![Repo Link](https://img.shields.io/badge/Repo-Link-black.svg)](https://github.com/bhanukirant99/airclass)
 [![Code style: prettier](https://img.shields.io/badge/Code_style-Prettier-ff69b4.svg?)](https://github.com/prettier/prettier)
-[![Gitter](https://badges.gitter.im/mirotalk/community.svg)](https://gitter.im/mirotalk/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+[![Gitter](https://badges.gitter.im/airclass/community.svg)](https://gitter.im/airclass/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 [![Discord](https://img.shields.io/badge/Chat-Discord-green)](https://discord.gg/TAeWXJCvBr)
 
-Powered by `WebRTC` using google Stun and [numb](http://numb.viagenie.ca/) Turn. `MiroTalk` provides video quality and latency not available with traditional technology.
+Powered by `WebRTC` using google Stun and [numb](http://numb.viagenie.ca/) Turn. `airclass` provides video quality and latency not available with traditional technology.
 
 Open the app with the following **supported browsers** & many more...
 
@@ -26,7 +26,7 @@ Open the app with the following **supported browsers** & many more...
 
 <br>
 
-[![mirotalk](www/images/preview.png)](https://skoolplus.herokuapp.com/)
+[![airclass](www/images/preview.png)](https://skoolplus.herokuapp.com/)
 
 ## Features
 
@@ -65,9 +65,9 @@ Open the app with the following **supported browsers** & many more...
 
 ```bash
 # clone this repo
-$ git clone https://github.com/miroslavpejic85/mirotalk.git
-# go to mirotalk dir
-$ cd mirotalk
+$ git clone https://github.com/bhanukirant99/airclass.git
+# go to airclass dir
+$ cd airclass
 # copy .env.template to .env
 $ cp .env.template .env
 # install dependencies
@@ -103,9 +103,9 @@ $ docker-compose down
 
 ```bash
 # The response will give you a entrypoint / Room URL for your meeting, where authorization: API_KEY_SECRET.
-$ curl -X POST "http://localhost:3000/api/v1/meeting" -H "authorization: mirotalk_default_secret" -H "Content-Type: application/json"
-$ curl -X POST "https://skoolplus.herokuapp.com/api/v1/meeting" -H "authorization: mirotalk_default_secret" -H "Content-Type: application/json"
-$ curl -X POST "https://skoolplus.herokuapp.com/api/v1/meeting" -H "authorization: mirotalk_default_secret" -H "Content-Type: application/json"
+$ curl -X POST "http://localhost:3000/api/v1/meeting" -H "authorization: airclass_default_secret" -H "Content-Type: application/json"
+$ curl -X POST "https://skoolplus.herokuapp.com/api/v1/meeting" -H "authorization: airclass_default_secret" -H "Content-Type: application/json"
+$ curl -X POST "https://skoolplus.herokuapp.com/api/v1/meeting" -H "authorization: airclass_default_secret" -H "Content-Type: application/json"
 ```
 
 ## Credits

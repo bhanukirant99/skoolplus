@@ -1,6 +1,6 @@
-## Expose MiroTalk on HTTPS
+## Expose airclass on HTTPS
 
-![mirotalk-https](https.png)
+![airclass-https](https.png)
 
 1. Generate a `self-signed certificate`
 

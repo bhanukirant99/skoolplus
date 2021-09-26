@@ -19,7 +19,7 @@ dependencies: {
     yamljs      : https://www.npmjs.com/package/yamljs
 }
 
-MiroTalk Signaling Server
+airclass Signaling Server
 Copyright (C) 2021 Miroslav Pejic <miroslav.pejic.85@gmail.com>
 
 This program is free software: you can redistribute it and/or modify
@@ -81,7 +81,7 @@ const { v4: uuidV4 } = require('uuid');
 
 const apiBasePath = '/api/v1'; // api endpoint path
 const api_docs = host + apiBasePath + '/docs'; // api docs
-const api_key_secret = process.env.API_KEY_SECRET || 'mirotalk_default_secret';
+const api_key_secret = process.env.API_KEY_SECRET || 'airclass_default_secret';
 const ngrokEnabled = process.env.NGROK_ENABLED;
 const ngrokAuthToken = process.env.NGROK_AUTH_TOKEN;
 const turnEnabled = process.env.TURN_ENABLED;
@@ -161,7 +161,7 @@ app.get('/join/*', (req, res) => {
 });
 
 /**
-    MiroTalk API v1
+    airclass API v1
     The response will give you a entrypoint / Room URL for your meeting.
     For api docs we use: https://swagger.io/
 */
@@ -174,7 +174,7 @@ app.post([apiBasePath + '/meeting'], (req, res) => {
     // check if user was authorized for the api call
     let authorization = req.headers.authorization;
     if (authorization != api_key_secret) {
-        log.debug('MiroTalk get meeting - Unauthorized', {
+        log.debug('airclass get meeting - Unauthorized', {
             header: req.headers,
             body: req.body,
         });
@@ -187,7 +187,7 @@ app.post([apiBasePath + '/meeting'], (req, res) => {
     res.end(JSON.stringify({ meeting: meetingURL }));
 
     // log.debug the output if all done
-    log.debug('MiroTalk get meeting - Authorized', {
+    log.debug('airclass get meeting - Authorized', {
         header: req.headers,
         body: req.body,
         meeting: meetingURL,
@@ -203,7 +203,7 @@ function getMeetingURL(host) {
     return 'http' + (host.includes('localhost') ? '' : 's') + '://' + host;
 }
 
-// end of MiroTalk API v1
+// end of airclass API v1
 
 /**
  * You should probably use a different stun-turn server
