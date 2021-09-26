@@ -20,13 +20,13 @@ Open the app with the following **supported browsers** & many more...
 
 [//]: #![webrtc](www/images/webrtc.png)
 
-[![Foo](www/images/browsers.png)](https://mirotalk.herokuapp.com/)
+[![Foo](www/images/browsers.png)](https://skoolplus.herokuapp.com/)
 
-## https://mirotalk.herokuapp.com/
+## https://skoolplus.herokuapp.com/
 
 <br>
 
-[![mirotalk](www/images/preview.png)](https://mirotalk.herokuapp.com/)
+[![mirotalk](www/images/preview.png)](https://skoolplus.herokuapp.com/)
 
 ## Features
 
@@ -54,14 +54,10 @@ Open the app with the following **supported browsers** & many more...
 
 ## Demo
 
--   `Open` https://mirotalk.up.railway.app/newcall `or` https://mirotalk.herokuapp.com/newcall
+-   `Open` https://skoolplus.herokuapp.com/newcall `or` https://skoolplus.herokuapp.com/newcall
 -   `Pick` your personal Room name and `Join To Room`
 -   `Allow` to use the camera and microphone
 -   `Share` the Room URL and `Wait` someone to join for video conference
-
-## Room join
-
--   You can also `join` directly to your `room` by going to https://mirotalk.up.railway.app/join/your-room-name-goes-here `or` https://mirotalk.herokuapp.com/join/your-room-name-goes-here
 
 ## Quick start
 
@@ -108,35 +104,9 @@ $ docker-compose down
 ```bash
 # The response will give you a entrypoint / Room URL for your meeting, where authorization: API_KEY_SECRET.
 $ curl -X POST "http://localhost:3000/api/v1/meeting" -H "authorization: mirotalk_default_secret" -H "Content-Type: application/json"
-$ curl -X POST "https://mirotalk.up.railway.app/api/v1/meeting" -H "authorization: mirotalk_default_secret" -H "Content-Type: application/json"
-$ curl -X POST "https://mirotalk.herokuapp.com/api/v1/meeting" -H "authorization: mirotalk_default_secret" -H "Content-Type: application/json"
+$ curl -X POST "https://skoolplus.herokuapp.com/api/v1/meeting" -H "authorization: mirotalk_default_secret" -H "Content-Type: application/json"
+$ curl -X POST "https://skoolplus.herokuapp.com/api/v1/meeting" -H "authorization: mirotalk_default_secret" -H "Content-Type: application/json"
 ```
-
-## API Documentation
-
-The API documentation uses [swagger](https://swagger.io/) at http://localhost:3000/api/v1/docs. Or check it out on [railway](https://mirotalk.up.railway.app/api/v1/docs) & [heroku](https://mirotalk.herokuapp.com/api/v1/docs).
-
----
-
-If you want `MiroTalk` to be `reachable` from the `outside` of your local network, you can use a service like [ngrok](https://ngrok.com/) (by editing the `Ngrok` part on `.env` file) or expose it directly on [https](ssl/README.md) or deploy it on:
-
-<br>
-
-[![Deploy on Heroku](https://www.herokucdn.com/deploy/button.svg)](https://www.heroku.com/)
-
-`demo` https://mirotalk.herokuapp.com/
-
-[![heroku-qr](www/images/mirotalk-heroku-qr.png)](https://mirotalk.herokuapp.com/)
-
-<br>
-
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app)
-
-`demo` https://mirotalk.up.railway.app/
-
-[![railway-qr](www/images/mirotalk-railway-qr.png)](https://mirotalk.up.railway.app/)
-
----
 
 ## Credits
 
@@ -149,20 +119,3 @@ Many Thanks to:
 -   fmeringdal (rest api)
 
 From where I took inspiration for this project. ❤️
-
-## Contributing
-
--   Pull Requests are very welcome! :slightly_smiling_face:
--   Just run [prettier](https://prettier.io) on all of your PRs before submitting, this can be done with the following comand: `npm run lint`
-
--   For communication we use [gitter](https://gitter.im/) or [discord](https://discord.com/) chats which can be found here:
-
-[![Gitter](https://badges.gitter.im/mirotalk/community.svg)](https://gitter.im/mirotalk/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge) [![Discord](https://img.shields.io/badge/chat-discord-green)](https://discord.gg/TAeWXJCvBr)
-
-## License
-
-[![AGPLv3](www/images/AGPLv3.png)](LICENSE)
-
----
-
-<p align="center"> Made with ❤️ by <a href="https://www.linkedin.com/in/miroslav-pejic-976a07101/">Miroslav Pejic</a></p>
