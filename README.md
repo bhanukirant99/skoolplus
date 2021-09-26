@@ -6,9 +6,9 @@
 
 [//]: https://img.shields.io/badge/<LABEL>-<MESSAGE>-<COLOR>
 
-[![Author](https://img.shields.io/badge/Author-Miroslav-brightgreen.svg)](https://www.linkedin.com/in/miroslav-pejic-976a07101/)
+[![Author](https://img.shields.io/badge/Author-bhanukiran-brightgreen.svg)](https://www.linkedin.com/in/bhanukiran-pejic-976a07101/)
 ![License: AGPLv3](https://img.shields.io/badge/License-AGPLv3-blue.svg)
-[![Donate](https://img.shields.io/badge/Donate-PayPal-brightgreen.svg)](https://paypal.me/MiroslavPejic?locale.x=it_IT)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-brightgreen.svg)](https://paypal.me/bhanukiranPejic?locale.x=it_IT)
 [![Repo Link](https://img.shields.io/badge/Repo-Link-black.svg)](https://github.com/bhanukirant99/airclass)
 [![Code style: prettier](https://img.shields.io/badge/Code_style-Prettier-ff69b4.svg?)](https://github.com/prettier/prettier)
 [![Gitter](https://badges.gitter.im/airclass/community.svg)](https://gitter.im/airclass/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)

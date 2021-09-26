@@ -6,7 +6,7 @@
  ██████ ███████ ██ ███████ ██   ████    ██   
 
 airclass Browser Client
-Copyright (C) 2021 Miroslav Pejic <miroslav.pejic.85@gmail.com>
+Copyright (C) 2021 bhanukiran Pejic <bhanukiran.pejic.85@gmail.com>
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published
@@ -4726,7 +4726,7 @@ function showAbout() {
             <img alt="airclass github" src="../images/github.png"></a><br/><br/>
             <button class="far fa-heart pulsate" onclick="window.open('https://github.com/sponsors/bhanukirant99?o=esb')"> Sponsor</button>
             <br /><br />
-            Author:<a href="https://www.linkedin.com/in/miroslav-pejic-976a07101/" target="_blank"> Miroslav Pejic</a>
+            Author:<a href="https://www.linkedin.com/in/bhanukiran-pejic-976a07101/" target="_blank"> bhanukiran Pejic</a>
         </div>
         `,
         showClass: {
